@@ -1,118 +1,37 @@
-<!DOCTYPE html>
-<html lang="en"><head><style>body {transition: opacity ease-in 0.2s; } 
-    body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
-    </style>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="Dadiar Anwar">
-        <link rel="stylesheet" href="Chess.css">
-        
-        <title>Chess</title>
-    </head>
-    
-    
-    <body>
-    
-        <!-- <h1>Chess <h4>(Made by : Dadiar Anwar)</h4></h1> -->
-        <h1>Chess</h1>
-        <h5>-by Dadiar Anwar</h5>
-        <h2 id="tog">White's Turn</h2>
-    
-    
-        
-        <ul>
-    
-            <div class="divv" id="row8">
-                <li class="box" id="b801" style="cursor: pointer; background-color: rgb(100, 75, 43);">Brook <img class="allimg" src="Brook.png" alt=""></li>
-                <li class="box" id="b802" style="cursor: pointer; background-color: rgb(240, 201, 150);">Bknight <img class="allimg" src="Bknight.png" alt=""></li>
-                <li class="box" id="b803" style="cursor: pointer; background-color: rgb(100, 75, 43);">Bbishop <img class="allimg" src="Bbishop.png" alt=""></li>
-                <li class="box" id="b804" style="cursor: pointer; background-color: rgb(240, 201, 150);">Bqueen <img class="allimg" src="Bqueen.png" alt=""></li>
-                <li class="box" id="b805" style="cursor: pointer; background-color: rgb(100, 75, 43);">Bking <img class="allimg" src="Bking.png" alt=""></li>
-                <li class="box" id="b806" style="cursor: pointer; background-color: rgb(240, 201, 150);">Bbishop <img class="allimg" src="Bbishop.png" alt=""></li>
-                <li class="box" id="b807" style="cursor: pointer; background-color: rgb(100, 75, 43);">Bknight <img class="allimg" src="Bknight.png" alt=""></li>
-                <li class="box" id="b808" style="cursor: pointer; background-color: rgb(240, 201, 150);">Brook <img class="allimg" src="Brook.png" alt=""></li>
-            </div>
-            <div class="divv" id="row7">
-                <li class="box" id="b701" style="cursor: pointer; background-color: rgb(240, 201, 150);">Bpawn <img class="allimg allpawn" src="Bpawn.png" alt=""></li>
-                <li class="box" id="b702" style="cursor: pointer; background-color: rgb(100, 75, 43);">Bpawn <img class="allimg allpawn" src="Bpawn.png" alt=""></li>
-                <li class="box" id="b703" style="cursor: pointer; background-color: rgb(240, 201, 150);">Bpawn <img class="allimg allpawn" src="Bpawn.png" alt=""></li>
-                <li class="box" id="b704" style="cursor: pointer; background-color: rgb(100, 75, 43);">Bpawn <img class="allimg allpawn" src="Bpawn.png" alt=""></li>
-                <li class="box" id="b705" style="cursor: pointer; background-color: rgb(240, 201, 150);">Bpawn <img class="allimg allpawn" src="Bpawn.png" alt=""></li>
-                <li class="box" id="b706" style="cursor: pointer; background-color: rgb(100, 75, 43);">Bpawn <img class="allimg allpawn" src="Bpawn.png" alt=""></li>
-                <li class="box" id="b707" style="cursor: pointer; background-color: rgb(240, 201, 150);">Bpawn <img class="allimg allpawn" src="Bpawn.png" alt=""></li>
-                <li class="box" id="b708" style="cursor: pointer; background-color: rgb(100, 75, 43);">Bpawn <img class="allimg allpawn" src="Bpawn.png" alt=""></li>
-            </div>
-            <div class="divv" id="row6">
-                <li class="box" id="b601" style="background-color: rgb(100, 75, 43);"></li>
-                <li class="box" id="b602" style="background-color: rgb(240, 201, 150);"></li>
-                <li class="box" id="b603" style="background-color: rgb(100, 75, 43);"></li>
-                <li class="box" id="b604" style="background-color: rgb(240, 201, 150);"></li>
-                <li class="box" id="b605" style="background-color: rgb(100, 75, 43);"></li>
-                <li class="box" id="b606" style="background-color: rgb(240, 201, 150);"></li>
-                <li class="box" id="b607" style="background-color: rgb(100, 75, 43);"></li>
-                <li class="box" id="b608" style="background-color: rgb(240, 201, 150);"></li>
-            </div>
-            <div class="divv" id="row5">
-                <li class="box" id="b501" style="background-color: rgb(240, 201, 150);"></li>
-                <li class="box" id="b502" style="background-color: rgb(100, 75, 43);"></li>
-                <li class="box" id="b503" style="background-color: rgb(240, 201, 150);"></li>
-                <li class="box" id="b504" style="background-color: rgb(100, 75, 43);"></li>
-                <li class="box" id="b505" style="background-color: rgb(240, 201, 150);"></li>
-                <li class="box" id="b506" style="background-color: rgb(100, 75, 43);"></li>
-                <li class="box" id="b507" style="background-color: rgb(240, 201, 150);"></li>
-                <li class="box" id="b508" style="background-color: rgb(100, 75, 43);"></li>
-            </div>
-            <div class="divv" id="row4">
-                <li class="box" id="b401" style="background-color: rgb(100, 75, 43);"></li>
-                <li class="box" id="b402" style="background-color: rgb(240, 201, 150);"></li>
-                <li class="box" id="b403" style="background-color: rgb(100, 75, 43);"></li>
-                <li class="box" id="b404" style="background-color: rgb(240, 201, 150);"></li>
-                <li class="box" id="b405" style="background-color: rgb(100, 75, 43);"></li>
-                <li class="box" id="b406" style="background-color: rgb(240, 201, 150);"></li>
-                <li class="box" id="b407" style="background-color: rgb(100, 75, 43);"></li>
-                <li class="box" id="b408" style="background-color: rgb(240, 201, 150);"></li>
-            </div>
-            <div class="divv" id="row3">
-                <li class="box" id="b301" style="background-color: rgb(240, 201, 150);"></li>
-                <li class="box" id="b302" style="background-color: rgb(100, 75, 43);"></li>
-                <li class="box" id="b303" style="background-color: rgb(240, 201, 150);"></li>
-                <li class="box" id="b304" style="background-color: rgb(100, 75, 43);"></li>
-                <li class="box" id="b305" style="background-color: rgb(240, 201, 150);"></li>
-                <li class="box" id="b306" style="background-color: rgb(100, 75, 43);"></li>
-                <li class="box" id="b307" style="background-color: rgb(240, 201, 150);"></li>
-                <li class="box" id="b308" style="background-color: rgb(100, 75, 43);"></li>
-            </div>
-    
-            <div class="divv" id="row2">
-                <li class="box Wpawn" id="b201" style="cursor: pointer; background-color: rgb(100, 75, 43);">Wpawn <img class="allimg allpawn" src="Wpawn.png" alt=""></li>
-                <li class="box Wpawn" id="b202" style="cursor: pointer; background-color: rgb(240, 201, 150);">Wpawn <img class="allimg allpawn" src="Wpawn.png" alt=""></li>
-                <li class="box Wpawn" id="b203" style="cursor: pointer; background-color: rgb(100, 75, 43);">Wpawn <img class="allimg allpawn" src="Wpawn.png" alt=""></li>
-                <li class="box Wpawn" id="b204" style="cursor: pointer; background-color: rgb(240, 201, 150);">Wpawn <img class="allimg allpawn" src="Wpawn.png" alt=""></li>
-                <li class="box Wpawn" id="b205" style="cursor: pointer; background-color: rgb(100, 75, 43);">Wpawn <img class="allimg allpawn" src="Wpawn.png" alt=""></li>
-                <li class="box Wpawn" id="b206" style="cursor: pointer; background-color: rgb(240, 201, 150);">Wpawn <img class="allimg allpawn" src="Wpawn.png" alt=""></li>
-                <li class="box Wpawn" id="b207" style="cursor: pointer; background-color: rgb(100, 75, 43);">Wpawn <img class="allimg allpawn" src="Wpawn.png" alt=""></li>
-                <li class="box Wpawn" id="b208" style="cursor: pointer; background-color: rgb(240, 201, 150);">Wpawn <img class="allimg allpawn" src="Wpawn.png" alt=""></li>
-            </div>
-            <div class="divv" id="row1">
-                <li class="box" id="b101" style="cursor: pointer; background-color: rgb(240, 201, 150);">Wrook <img class="allimg" src="Wrook.png" alt=""></li>
-                <li class="box" id="b102" style="cursor: pointer; background-color: rgb(100, 75, 43);">Wknight <img class="allimg" src="Wknight.png" alt=""></li>
-                <li class="box" id="b103" style="cursor: pointer; background-color: rgb(240, 201, 150);">Wbishop <img class="allimg" src="Wbishop.png" alt=""></li>
-                <li class="box" id="b104" style="cursor: pointer; background-color: rgb(100, 75, 43);">Wqueen <img class="allimg" src="Wqueen.png" alt=""></li>
-                <li class="box" id="b105" style="cursor: pointer; background-color: rgb(240, 201, 150);">Wking <img class="allimg" src="Wking.png" alt=""></li>
-                <li class="box" id="b106" style="cursor: pointer; background-color: rgb(100, 75, 43);">Wbishop <img class="allimg" src="Wbishop.png" alt=""></li>
-                <li class="box" id="b107" style="cursor: pointer; background-color: rgb(240, 201, 150);">Wknight <img class="allimg" src="Wknight.png" alt=""></li>
-                <li class="box" id="b108" style="cursor: pointer; background-color: rgb(100, 75, 43);">Wrook <img class="allimg" src="Wrook.png" alt=""></li>
-            </div>
-    
-        </ul>
-        <script src="Chess.js"></script>
-    <div style="text-align:right;position:fixed;z-index:9999999;bottom:0;width:auto;right:1%;cursor:pointer;line-height:0;display:block!important"><a title="Hosted on free web hosting 000webhost.com. Host your own website for FREE." target="_blank" href="https://www.000webhost.com/?utm_source=000webhostapp&amp;utm_campaign=000_logo&amp;utm_medium=website&amp;utm_content=footer_img"></a></div><script>function getCookie(t){for(var e=t+"=",n=decodeURIComponent(document.cookie).split(";"),o=0;o<n.length;o++){for(var i=n[o];" "==i.charAt(0);)i=i.substring(1);if(0==i.indexOf(e))return i.substring(e.length,i.length)}return""}getCookie("hostinger")&&(document.cookie="hostinger=;expires=Thu, 01 Jan 1970 00:00:01 GMT;",location.reload());var wordpressAdminBody=document.getElementsByClassName("wp-admin")[0],notification=document.getElementsByClassName("notice notice-success is-dismissible"),hostingerLogo=document.getElementsByClassName("hlogo"),mainContent=document.getElementsByClassName("notice_content")[0];if(null!=wordpressAdminBody&&0<notification.length&&null!=mainContent){var googleFont=document.createElement("link");googleFontHref=document.createAttribute("href"),googleFontRel=document.createAttribute("rel"),googleFontHref.value="https://fonts.googleapis.com/css?family=Roboto:300,400,600,700",googleFontRel.value="stylesheet",googleFont.setAttributeNode(googleFontHref),googleFont.setAttributeNode(googleFontRel);var css="@media only screen and (max-width: 576px) {#main_content {max-width: 320px !important;} #main_content h1 {font-size: 30px !important;} #main_content h2 {font-size: 40px !important; margin: 20px 0 !important;} #main_content p {font-size: 14px !important;} #main_content .content-wrapper {text-align: center !important;}} @media only screen and (max-width: 781px) {#main_content {margin: auto; justify-content: center; max-width: 445px;}} @media only screen and (max-width: 1325px) {.web-hosting-90-off-image-wrapper {position: absolute; max-width: 95% !important;} .notice_content {justify-content: center;} .web-hosting-90-off-image {opacity: 1;}} @media only screen and (min-width: 769px) {.notice_content {justify-content: space-between;} #main_content {margin-left: 5%; max-width: 445px;} .web-hosting-90-off-image-wrapper {position: absolute; display: flex; justify-content: center; width: 50%; margin-left: 45%;}} .web-hosting-90-off-image {max-width: 90%;} .content-wrapper {min-height: 454px; display: flex; flex-direction: column; justify-content: center; z-index: 5} .notice_content {display: flex; align-items: center;} * {-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;} .upgrade_button_red_sale{box-shadow: 0 2px 4px 0 rgba(255, 69, 70, 0.2); width: 264px; border: 0; border-radius: 3px; background-color: #FF5C62 !important; padding: 15px 55px !important; font-family: 'Roboto', sans-serif; font-size: 16px; font-weight: 600; color: #ffffff;} .upgrade_button_red_sale:hover{color: #ffffff !important; background: #d10303 !important;}",style=document.createElement("style"),sheet=window.document.styleSheets[0];style.styleSheet?style.styleSheet.cssText=css:style.appendChild(document.createTextNode(css)),document.getElementsByTagName("head")[0].appendChild(style),document.getElementsByTagName("head")[0].appendChild(googleFont);var button=document.getElementsByClassName("upgrade_button_red")[0],link=button.parentElement;link.setAttribute("href","https://www.hostinger.com/hosting-starter-offer?utm_source=000webhost&utm_medium=panel&utm_campaign=000-wp"),link.innerHTML='<button class="upgrade_button_red_sale">Claim Deal</button>',(notification=notification[0]).setAttribute("style","padding-bottom: 0; padding-top: 5px; background-color: #040713; background-size: cover; background-repeat: no-repeat; color: #ffffff; border-left-color: #040713;"),notification.className="notice notice-error is-dismissible";var mainContentHolder=document.getElementById("main_content");mainContentHolder.setAttribute("style","padding: 0;"),hostingerLogo[0].remove();var h1Tag=notification.getElementsByTagName("H1")[0];h1Tag.className="000-h1",h1Tag.innerHTML="Black Friday",h1Tag.setAttribute("style",'color: white; font-family: "Roboto", sans-serif; font-size: 48px; font-weight: 700;');var h2Tag=document.createElement("H2");h2Tag.innerHTML="Up to 90% off 4-year hosting plans + free domain, SSL & DDoS protection",h2Tag.setAttribute("style",'color: white; margin: 10px 0 15px 0; font-family: "Roboto", sans-serif; font-size: 16px; font-weight: 400; line-height: 1;'),h1Tag.parentNode.insertBefore(h2Tag,h1Tag.nextSibling);var paragraph=notification.getElementsByTagName("p")[0];paragraph.innerHTML="$<span style='font-size: 80px;'>2.49</span>/mo",paragraph.setAttribute("style",'font-family: "Roboto", sans-serif; font-size: 48px; font-weight: 700; margin: 0;');var list=notification.getElementsByTagName("UL")[0];list.remove();var org_html=mainContent.innerHTML,new_html='<div class="content-wrapper">'+mainContent.innerHTML+'</div><div class="web-hosting-90-off-image-wrapper"><img class="web-hosting-90-off-image" src="https://cdn.000webhost.com/000webhost/promotions/bf-2022-bottom-banner.png"></div>';mainContent.innerHTML=new_html;var saleImage=mainContent.getElementsByClassName("web-hosting-90-off-image")[0]}</script>
-    
-    <script>
-    
-    
-       
-    </script>
-    
-    </body><demoair-container id="demoairRecorderContainer"></demoair-container></html>
+<html style="--txtClr:hsl(0, 0%, 90%); --bgClr:hsla(214, 20%, 10%, 100%); --bg:linear-gradient(to right, hsl(214, 50%, 10%) 0%, hsl(214, 20%, 9%) 20%, hsl(214, 20%, 9%) 50%, hsl(214, 20%, 9%) 80%, hsl(214, 50%, 10%) 100%); --a0Clr:hsl(220, 50%, 24%); --a1Clr:hsl(220, 65%, 26%); --a2Clr:hsl(220, 50%, 30%); --a3Clr:hsl(50, 90%, 85%); --a4Clr:hsl(50, 100%, 96%); --b0Clr:hsl(210, 80%, 10%); --b1Clr:hsl(210, 80%, 15%); --b2Clr:hsl(210, 100%, 30%); --b3Clr:hsl(214, 100%, 84%); --b4Clr:hsl(214, 100%, 94%); --o1Clr:hsl(50, 100%, 60%); --r1Clr:hsl(0, 100%, 65%); --hdrImg:url(images\/hdr\/hdr-main-dark\.svg); --hdrAdvImg:url(images\/hdr\/hdr-adv-dark\.svg); --h1Shadow1:2px 2px 2px hsl(214, 10%, 19%), -2px -2px 2px hsl(214, 10%, 19%), 2px -2px 2px hsl(214, 10%, 19%), -2px 2px 2px hsl(214, 10%, 19%); --h1Shadow:1px 2px 5px hsl(220, 90%, 20%), 0px 0px 0 hsl(214, 100%, 100%);"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><script src="/games/images/garbochess.js"></script><link rel="stylesheet" href="/style4.css"><script src="/iframe.js" defer=""></script><style>body { background: transparent; }</style></head><body style="text-align:center;"><div><audio id="sndmove" src="/images/sounds/clook.mp3" preload="auto"></audio><audio id="sndtake" src="/images/sounds/take.mp3" preload="auto"></audio><audio id="sndcheck" src="/images/sounds/no.mp3" preload="auto"></audio><style>  .speaker { height: 30px; width: 30px; position: relative; overflow: hidden; display: inline-block; vertical-align:top; }  .speaker span { display: block; width: 9px; height: 9px; background-color: blue; margin: 10px 0 0 1px; } .speaker span:after { content: ""; position: absolute; width: 0; height: 0; border-style: solid; border-color: transparent blue transparent transparent; border-width: 10px 16px 10px 15px; left: -13px; top: 5px; } .speaker span:before { transform: rotate(45deg); border-radius: 0 60px 0 0; content: ""; position: absolute; width: 5px; height: 5px; border-style: double; border-color: blue; border-width: 7px 7px 0 0; left: 18px; top: 9px; transition: all 0.2s ease-out; } .speaker:hover span:before { transform: scale(.8) translate(-3px, 0) rotate(42deg); } .speaker.mute span:before { transform: scale(.5) translate(-15px, 0) rotate(36deg); opacity: 0; } .speaker.mute span { background-color: #bbb; } .speaker.mute span:after {border-color: transparent #bbb transparent #bbb;} </style><div id="main" style="position:relative; width:360px; min-height:510px; border: none;  margin:auto; display:block;"><div style="position:relative; margin: 0 0 5px 0; height:40px;"><button onclick="event.stopPropagation(); optPop()" class="btn" style="position:absolute; left:-39px;top:3px">New Game</button><button onclick="event.stopPropagation(); rotChg()" class="btn" style="position:absolute; left:57px;top:3px; width:35px; height:30px; padding:0;"><img src="images/chess-rotate.svg" style="height:28px; "></button><div id="msg" style="position:absolute; pointer-events: none; left:0px; right:0px; top:7px; font: bold 22px Arial; color: red; text-align:center;">Welcome</div><button onclick="event.stopPropagation(); uiUndoMove()" class="btn" style="position:absolute; right:31px;top:3px">Undo</button><div onclick="soundToggle()" id="sound" class="speaker mute" style="position:absolute; right:-1px;top:3px; cursor:pointer;"><span></span></div></div><div id="timers" style="display:none; margin:0 0 5px 0; height:44px; border-radius:15px;"><div style="display:inline-block; float:left;"><div style="display: inline-block; height: 43.2px; width: 94.5675px;" id="timer0"><canvas width="189" height="86" style="background-color: rgb(34, 34, 34); border-radius: 10px; width: 94.5675px; height: 43.2px;"></canvas></div><div style="display:inline-block; height:18px; width:24px; padding-top:6px;  border-radius:17px; border: 2px solid green; background-color:white; vertical-align:top; margin-top:12px; margin-left:3px;"></div></div><div style="display:inline-block; float:right; "><div style="display:inline-block; height:18px; width:24px; padding-top:6px; border-radius:17px; border: 2px solid green; background-color:black; vertical-align:top; margin-top:12px; margin-right:3px;"></div><span id="timer1" style="height: 43.2px; width: 94.5675px;"><canvas width="189" height="86" style="background-color: rgb(34, 34, 34); border-radius: 10px; width: 94.5675px; height: 43.2px;"></canvas></span></div></div><div style="position: relative; width:362px; height:362px;  text-align:center; margin:auto;"><div id="board" style="position: absolute; top: 0;"></div> <div id="mouser" style="position: absolute; top: 0; width:360px; height:360px;"></div> <div id="drag" style="position:absolute; pointer-events: none; "></div></div><div id="optpop" style="position: absolute; left: 10px; top: 7px; width: 320px; padding: 5px; border-radius: 9px; background-color: rgb(136, 170, 204); box-shadow: rgba(40, 40, 40, 0.75) 8px 8px 5px 0px; transition: all 0.3s linear 0s; opacity: 1; text-align: center; z-index: 12;"><div id="optInside" style="margin: 5px auto 5px auto;"><div style="font: 15px Verdana; border: 3px solid black; background-color: rgba(0,0,255,0.08); padding: 0 0 15px 0; border-radius: 10px;   margin:3px;"><div style="font: 20px Verdana; padding:9px; text-align:left;">Black player:</div><label class="label">Type: <select class="select" onchange="my.opts['playerType1'].item.onChg(this.value)" ;=""><option id="playerType10" value="Human">Human</option>
+<option id="playerType11" value="Computer (Beginner)" selected="">Computer (Beginner)</option>
+<option id="playerType12" value="Computer (Novice)">Computer (Novice)</option>
+<option id="playerType13" value="Computer (Skilled)">Computer (Skilled)</option>
+<option id="playerType14" value="Computer (Hard)">Computer (Hard)</option>
+<option id="playerType15" value="Computer (Ruthless)">Computer (Ruthless)</option>
+</select></label><div style="margin-top:5px;"><label class="label">Time: <select class="select" onchange="my.opts['timeType1'].item.onChg(this.value)" ;=""><option id="timeType10" value="Endless">Endless</option>
+<option id="timeType11" value="1 Hour">1 Hour</option>
+<option id="timeType12" value="30 min">30 min</option>
+<option id="timeType13" value="20 min">20 min</option>
+<option id="timeType14" value="15 min">15 min</option>
+<option id="timeType15" value="10 min">10 min</option>
+<option id="timeType16" value="7 min">7 min</option>
+<option id="timeType17" value="5 min">5 min</option>
+<option id="timeType18" value="2 min">2 min</option>
+<option id="timeType19" value="1 min">1 min</option>
+</select></label></div></div><div style="font: 15px Verdana; border: 3px solid white; background-color: rgba(0,0,255,0.08); padding: 0 0 15px 0; border-radius: 10px;   margin:3px;"><div style="font: 20px Verdana; padding:9px; text-align:left;">White player:</div><label class="label">Type: <select class="select" onchange="my.opts['playerType0'].item.onChg(this.value)" ;=""><option id="playerType00" value="Human" selected="">Human</option>
+<option id="playerType01" value="Computer (Beginner)">Computer (Beginner)</option>
+<option id="playerType02" value="Computer (Novice)">Computer (Novice)</option>
+<option id="playerType03" value="Computer (Skilled)">Computer (Skilled)</option>
+<option id="playerType04" value="Computer (Hard)">Computer (Hard)</option>
+<option id="playerType05" value="Computer (Ruthless)">Computer (Ruthless)</option>
+</select></label><div style="margin-top:5px;"><label class="label">Time: <select class="select" onchange="my.opts['timeType0'].item.onChg(this.value)" ;=""><option id="timeType00" value="Endless">Endless</option>
+<option id="timeType01" value="1 Hour">1 Hour</option>
+<option id="timeType02" value="30 min">30 min</option>
+<option id="timeType03" value="20 min">20 min</option>
+<option id="timeType04" value="15 min">15 min</option>
+<option id="timeType05" value="10 min">10 min</option>
+<option id="timeType06" value="7 min">7 min</option>
+<option id="timeType07" value="5 min">5 min</option>
+<option id="timeType08" value="2 min">2 min</option>
+<option id="timeType09" value="1 min">1 min</option>
+</select></label></div></div></div><div id="optInside" style="margin: 5px auto 5px auto;"><label class="label">Pieces: <select class="select" onchange="my.opts['imgSet'].item.onChg(this.value)" ;=""><option id="imgSet0" value="Standard">Standard</option>
+<option id="imgSet1" value="Maya">Maya</option>
+<option id="imgSet2" value="Leipzig">Leipzig</option>
+<option id="imgSet3" value="Merida">Merida</option>
+</select></label></div><div style="float:right; margin: 0 0 5px 10px;"><button id="optYes" onclick="optYes()" style="z-index:2; font: 22px Arial;" class="btn">✔</button><button onclick="optNo()" style="z-index:2; font: 22px Arial;" class="btn">✘</button></div></div><div id="moves" style="position: relative; margin: 5px 0 0 0; width:360px; height: 100px; "><textarea style="width:99%; height: 100px;" id="movelist"></textarea></div><div id="output" style="display: none;"></div><input id="FenTextBox" style="width:360px; display: none;" onchange="UIChangeFEN()"><div class="copyrt" style="position:relative; margin: 15px 0 0 0;">© 2022 Rod Pierce  v0.84</div></div></div><script defer="" src="images/chessrp2.js"></script></body></html>
