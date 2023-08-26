@@ -1,27 +1,38 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./D.webp">
-    <title>Fifa Card</title>
-    <style>
-        body, html {
-          height: 100%;
-          margin: 0;
-          padding: 0;
-        }
-        
-        #iframeContainer {
-          height: 100%;
-          width: 100%;
-        }
-      </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FIFA Rosters Pack</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+
+    iframe {
+      width: 100vw;
+      height: 100vh;
+      border: none;
+    }
+  </style>
 </head>
 <body>
-    <iframe src="https://eu-browse.startpage.com/av/proxy?ep=5047493649324974666a4572497a4d32637a64304d486b704e7941314e337073515870674132467a4254416b4944592b636e45314c4441704e6a5a724c5442364d686b554c4349676268636b4e6a74364d686c304d4341674e7a5634633268715a57387749534278646a42326647786e4e7a356d633331304a6d4a7a637a316e4f4770714933426e4e796434435173474e42453446444d4d42775633436735364d7874336467426e4d435234636a316e4d326c6b49335231633278336432646f4e44737a4a6e4a32653242786657632b59325a6c64435a6e4e7a77674b547069546a4138494749784d43643464513d3d&ek=58313953525552425131524652463966&ekdata=51d54ef5fc2ad06bc3921981049ea5d4" width="100%" height="100%" frameborder="0"></iframe>
+  <iframe id="pack-iframe" src="https://www.fifarosters.com/pack?packtype=weekend_pack&v=23"></iframe>
 
+  <script>
+    document.getElementById('pack-iframe').addEventListener('load', () => {
+      document.getElementById('pack-iframe').style.pointerEvents = 'none';
+      
+      const iframeDocument = document.getElementById('pack-iframe').contentDocument;
+      const iframeLinks = iframeDocument.querySelectorAll('a');
+      
+      iframeLinks.forEach(link => {
+        link.addEventListener('click', (event) => {
+          event.preventDefault(); // Prevent the link from navigating
+        });
+      });
+    });
+  </script>
 </body>
 </html>
