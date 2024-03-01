@@ -15,6 +15,19 @@
 <body>
 
   <iframe class="game" id="gameFrame" name="Fortnite" src="https://ubg98.github.io/cookie-clicker-2-unblocked.html" tabindex="0"></iframe>
-
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var iframe = document.getElementById('myIframe');
+        iframe.addEventListener('load', function() {
+            var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+            var navbar = iframeDocument.getElementById('mainNav');
+            if (navbar) {
+                navbar.style.display = 'none';
+                // or you can remove the navbar from the DOM completely
+                // navbar.parentNode.removeChild(navbar);
+            }
+        });
+    });
+    </script>
 
 </body></html>
