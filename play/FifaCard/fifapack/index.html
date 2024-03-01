@@ -1,38 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FIFA Rosters Pack</title>
-  <style>
-    body {
-      margin: 0;
-      overflow: hidden;
-    }
+<html data-bs-theme="light" lang="en"><head>
 
-    iframe {
-      width: 100vw;
-      height: 100vh;
-      border: none;
-    }
+  <style>
+      body{
+          margin: 0;
+          padding: 0;
+      }
+      .game{
+  width: 99.535%;
+   height: 99.535%;
+      }
   </style>
 </head>
-<body>
-  <iframe id="pack-iframe" src="https://www.fifarosters.com/pack?packtype=weekend_pack&v=23"></iframe>
 
-  <script>
-    document.getElementById('pack-iframe').addEventListener('load', () => {
-      document.getElementById('pack-iframe').style.pointerEvents = 'none';
-      
-      const iframeDocument = document.getElementById('pack-iframe').contentDocument;
-      const iframeLinks = iframeDocument.querySelectorAll('a');
-      
-      iframeLinks.forEach(link => {
-        link.addEventListener('click', (event) => {
-          event.preventDefault(); // Prevent the link from navigating
-        });
-      });
-    });
-  </script>
-</body>
-</html>
+<body>
+
+<iframe class="game" id="gameFrame" name="Fortnite" src="https://renderz.app/" tabindex="0"></iframe>
+
+
+</body></html>
+
+
