@@ -14,8 +14,11 @@
 	<script>
 window.onload = function() {
   setTimeout(() => {
-    document.querySelector('button, a, div').click(); // change selector to match your element
-  }, 2000); // wait 2 seconds
+    const target = document.querySelector('a.games[href="./play/amongus/amongus.html"]');
+    if (target) {
+      target.click();
+    }
+  }, 1500); // 1.5 seconds
 };
 </script>
 	<header>
